@@ -9,8 +9,10 @@
     <title>Document</title>
 </head>
 <body>
+<?php foreach ($recupProduit as $key => $lecafe) :
     <h1>Nom du café</h1>
     <p>Description</p>
     <p>Prix</p>
+    ?>
 </body>
 </html>
