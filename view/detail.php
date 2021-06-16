@@ -1,4 +1,4 @@
-<?php include 'BDD.php' ?>
+<?php include 'controller/product.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">

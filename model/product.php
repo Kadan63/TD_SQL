@@ -5,9 +5,9 @@ class Produit{
     }
     public function listProduct(){
         $servername = 'localhost';
-        $username = 'Kadan';
-        $password = 'AtWY227wg';
-        $bddname = 'shop_ton_cafe';
+        $username = 'root';
+        $password ='';
+        $bddname = 'Shop_ton_cafe';
 
         echo 'BDD Connectée.';
 
@@ -22,7 +22,7 @@ class Produit{
             return $products;
         }
         catch(PDOException $e){
-            echo "Erreur : " . $e->getMassage();
+            echo "Erreur : " . $e->getMessage();
             echo "Erreur code : ". $e->getCode();
         }
     }

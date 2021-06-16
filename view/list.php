@@ -1,4 +1,4 @@
-<?php include '../BDD.php' ?>
+<?php include '../controller/product.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,12 +10,15 @@
 </head>
 <body>
     <h1>Liste des cafés</h1>
-
-    <article>
-        <h2>Nom du café</h2>
-        <p>Prix</p>
-        <a href="">En savoir plus</a>
-    </article>
-
+<?php foreach ($recupProduit as $key => $lecafe) :
+    if ($lecafe -> idCategory == 3){
+    echo "<article>";
+    echo "<h2>$lecafe->title</h2>";
+    echo "<p>$lecafe->price</p>";
+    echo "<a href="localhost/TD_SQL/view/detail.php?id=<?php echo $kheys ?>">En savoir plus</a>";
+    echo "</article>";
+    }
+endforeach;
+    ?>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<?php include ("controller/product.php"); ?>
+<?php require("../controller/product.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,12 +17,14 @@
             <th style="text-align:left;">Prix</th>
             <th colspan="2" style="text-align:left;">Action</th>
         </tr>
+        <?php foreach ($recupProduit as $key => $cafe) : ?>
         <tr>
-            <td><?php echo $recupProduit->title;?></td>
-            <td><?php echo $recupProduit->price;?></td>
+            <td><?php echo $cafe->title;?></td>
+            <td><?php echo $cafe->price;?></td>
             <td><a href="" title="Modifier">Modifier</a></td>
             <td><a href="" title="Supprimer">Supprimer</a></td>
         </tr>
+        <?php endforeach ?>
     </table>
     
 
